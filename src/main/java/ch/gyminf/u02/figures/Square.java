@@ -2,7 +2,7 @@ package ch.gyminf.u02.figures;
 
 import gui.Window;
 
-public class Square extends AbstractFigure {
+public class Square extends AbstractFigure implements ClosedFigure {
 	private int width;
 
 	public Square(int x, int y, int w) {

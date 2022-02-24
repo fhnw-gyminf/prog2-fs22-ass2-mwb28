@@ -2,7 +2,7 @@ package ch.gyminf.u02.figures;
 
 import gui.Window;
 
-public class Triangle implements Figure{
+public class Triangle implements Figure, ClosedFigure{
  
 	private Point firstPoint;
 	private Point secondPoint;
@@ -48,6 +48,34 @@ public class Triangle implements Figure{
 	public void move(int dx, int dy) {
 		
 		
+	}
+
+
+	@Override
+	public boolean contains(int x, int y) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
+	@Override
+	public double getArea() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	@Override
+	public double getCircumference() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	@Override
+	public boolean isConvex() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 

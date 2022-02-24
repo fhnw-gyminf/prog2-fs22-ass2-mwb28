@@ -2,7 +2,7 @@ package ch.gyminf.u02.figures;
 
 import gui.Window;
 
-public class RoundedRectangle extends AbstractFigure {
+public class RoundedRectangle extends AbstractFigure implements ClosedFigure {
 	private int width;
 	private int height;
 	private int cornerRadius;
@@ -45,6 +45,30 @@ public class RoundedRectangle extends AbstractFigure {
 		window.fillCircle(getX()+width-cornerRadius, getY()+height-cornerRadius, cornerRadius);
 		window.fillCircle(getX()+cornerRadius,getY()+height-cornerRadius , cornerRadius);
 		
+	}
+
+	@Override
+	public boolean contains(int x, int y) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public double getArea() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public double getCircumference() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public boolean isConvex() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }
