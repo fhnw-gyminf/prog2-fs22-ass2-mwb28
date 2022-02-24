@@ -1,6 +1,6 @@
 package ch.gyminf.u02.figures;
 
-public class Polygon implements ClosedFigure, ClosedPolygonalChain {
+public class Polygon  implements ClosedFigure, ClosedPolygonalChain {
 	private int[] xCoords;
 	private int[] yCoords;
 
