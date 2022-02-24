@@ -3,23 +3,18 @@ package ch.gyminf.u02.figures;
 import gui.Window;
 
 public class Line implements Figure, OpenPolygonalChain {
-	private Point starPoint;
-	private Point endPoint;
-	private Point[] openChain;
+	 private Point starPoint;
+	 private Point endPoint;
+	
 
 	public Line(int x0, int y0, int x1, int y1) {
-		this.starPoint.x= x0;
-		this.starPoint.y = y0;
-
-		this.endPoint.x= x1;
-		this.endPoint.y = y1;
+		starPoint = new Point(x0, y0);
+		endPoint = new Point (x1, y1);
+	
 
 
 	}
-	public Line(Point points []){
-		
-
-	}
+	
 
 	public Point getStart() {
 		
