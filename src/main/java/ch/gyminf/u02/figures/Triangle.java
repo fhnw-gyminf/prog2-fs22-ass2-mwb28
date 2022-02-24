@@ -21,10 +21,10 @@ public class Triangle implements Figure{
 	@Override
 	public void draw(Window window) {
 		
-		window.drawLine(firstPoint.x, firstPoint.y, secondPoint.x, secondPoint.y);
-		window.drawLine(secondPoint.x,secondPoint.y, thirdPoint.x, thirdPoint.y);
-		window.drawLine(thirdPoint.x,thirdPoint.y, firstPoint.x, firstPoint.y);
-		window.
+		window.drawLine(firstPoint.getX(), firstPoint.getY(), secondPoint.getX(), secondPoint.getY());
+		window.drawLine(secondPoint.getX(),secondPoint.getY(), thirdPoint.getX(), thirdPoint.getY());
+		window.drawLine(thirdPoint.getX(),thirdPoint.getY(), firstPoint.getX(), firstPoint.getY());
+		
 	}
 
 	
