@@ -1,24 +1,47 @@
 package ch.gyminf.u02.figures;
 
-public class RoundedRectangle {
+import gui.Window;
+
+public class RoundedRectangle extends AbstractFigure {
+	private int width;
+	private int height;
+	private int cornerRadius;
+
 
 	public RoundedRectangle(int x, int y, int width, int height, int cornerRadius) {
-		// TODO Auto-generated constructor stub
+		super(x, y);
+		this.width =width;
+		this.height = height;
+		this.cornerRadius =cornerRadius;
+
 	}
 
 	public int getWidth() {
-		// TODO Auto-generated constructor stub
-		return 0;
+		
+		return width;
 	}
 
 	public int getHeight() {
-		// TODO Auto-generated constructor stub
-		return 0;
+		
+		return height;
 	}
 
 	public int getCornerRadius() {
-		// TODO Auto-generated constructor stub
-		return 0;
+		
+
+		return cornerRadius;
+	}
+	@Override
+	public void draw(Window window) {
+		
+		window.fillRect(getX(), getY(), width, height);
+		window.fillRect(getX()-cornerRadius, getY()+ cornerRadius, cornerRadius, height- (2*cornerRadius));
+		window.fillRect(getX()+width,getY()+cornerRadius, cornerRadius, height - (2*cornerRadius));
+		window.fillCircle(getX(),getY()+cornerRadius, cornerRadius);
+		window.fillCircle(getX()+width, getY()+cornerRadius, cornerRadius);
+		window.fillCircle(getX()+width, (getY()+height)-cornerRadius, cornerRadius);
+		window.fillCircle(getX(), (getY()+height)-cornerRadius, cornerRadius);
+
 	}
 
 }

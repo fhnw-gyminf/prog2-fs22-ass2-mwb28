@@ -1,14 +1,24 @@
 package ch.gyminf.u02.figures;
 
-public class Circle {
+import gui.Window;
+
+public class Circle extends AbstractFigure{
+	private int r;
 
 	public Circle(int x, int y, int r) {
-		// TODO Auto-generated constructor stub
+		super(x,y);
+		this.r =r;
+		
 	}
 
 	public int getRadius() {
-		// TODO Auto-generated constructor stub
-		return 0;
+		
+		return r;
+	}
+	@Override
+	public void draw(Window window) {
+		window.fillCircle(getX(), getY(), r);
+		
 	}
 
 }

@@ -1,14 +1,22 @@
 package ch.gyminf.u02.figures;
 
-public class Square {
+import gui.Window;
+
+public class Square extends AbstractFigure {
+	private int width;
 
 	public Square(int x, int y, int w) {
-		// TODO Auto-generated constructor stub
+		super(x, y);
+		this.width = w;	
 	}
 
 	public int getWidth() {
-		// TODO Auto-generated constructor stub
-		return 0;
+		
+		return width;
+	}
+	@Override
+	public void draw(Window window) {
+		window.fillRect(getX(), getY(), width, width);
 	}
 
 }

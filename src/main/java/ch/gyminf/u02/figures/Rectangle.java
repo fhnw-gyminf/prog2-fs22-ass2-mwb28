@@ -1,19 +1,30 @@
 package ch.gyminf.u02.figures;
 
-public class Rectangle {
+import gui.Window;
+
+public class Rectangle extends AbstractFigure {
+	private int width;
+	private int height;
+
 
 	public Rectangle(int x, int y, int w, int h) {
-		// TODO Auto-generated constructor stub
+		super(x,y);
+		this.width=w;
+		this.height =h;
 	}
 
 	public int getWidth() {
-		// TODO Auto-generated constructor stub
-		return 0;
+		
+		return width;
 	}
 
 	public int getHeight() {
-		// TODO Auto-generated constructor stub
-		return 0;
+		
+		return height;
+	}
+	@Override
+	public void draw(Window window) {
+		window.fillRect(getX(), getY(), width, height);
 	}
 
 }

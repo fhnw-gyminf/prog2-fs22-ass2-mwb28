@@ -16,10 +16,11 @@ public class Editor {
 		Window window = new Window("Figures", 800, 600);
 
 		Graphics g = new Graphics();
+		
 		g.addFigure(new Circle(350, 150, 50));
-		g.addFigure(new RoundedRectangle(100, 100, 100, 100, 20));
-		g.addFigure(new Rectangle(200, 200, 200, 200));
-		g.addFigure(new Triangle(new Point(300, 300), new Point(350, 200), new Point(400, 300)));
+		//g.addFigure(new RoundedRectangle(100, 100, 100, 100, 20));
+		// g.addFigure(new Rectangle(200, 200, 200, 200));
+		//g.addFigure(new Triangle(new Point(300, 300), new Point(350, 200), new Point(400, 300)));
 		g.draw(window);
 
 		window.open();
