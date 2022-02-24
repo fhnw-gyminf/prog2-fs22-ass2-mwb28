@@ -23,26 +23,27 @@ public class Circle extends AbstractFigure implements ClosedFigure{
 
 	@Override
 	public boolean contains(int x, int y) {
-		// TODO Auto-generated method stub
-		return false;
+		
+		return x > getX()-getRadius() && x < getX()+ getRadius() && y > getY()-getRadius() && y < getY()+getRadius();
 	}
 
 	@Override
 	public double getArea() {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		return Math.PI * r*r;
+		
 	}
 
 	@Override
 	public double getCircumference() {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		return 2*Math.PI*getRadius();
 	}
 
 	@Override
 	public boolean isConvex() {
-		// TODO Auto-generated method stub
-		return false;
+		
+		return true;
 	}
 
 }
