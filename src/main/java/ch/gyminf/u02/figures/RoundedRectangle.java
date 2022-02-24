@@ -33,15 +33,18 @@ public class RoundedRectangle extends AbstractFigure {
 	}
 	@Override
 	public void draw(Window window) {
+		//window.setColor(0, 0, 0);
+		window.fillRect(getX()+cornerRadius, getY(), width-(2*cornerRadius), height);
+		//window.setColor(0, 255, 0);
+		window.fillRect(getX(), getY()+ cornerRadius, cornerRadius, height- (2*cornerRadius));
+		//window.setColor(255, 0, 0);
+		window.fillRect(getX()+width-cornerRadius,getY()+cornerRadius, cornerRadius, height - (2*cornerRadius));
+		//window.setColor(0, 0, 255);
+		window.fillCircle(getX()+cornerRadius, getY()+cornerRadius, cornerRadius);
+		window.fillCircle(getX()+width-cornerRadius, getY()+cornerRadius, cornerRadius);
+		window.fillCircle(getX()+width-cornerRadius, getY()+height-cornerRadius, cornerRadius);
+		window.fillCircle(getX()+cornerRadius,getY()+height-cornerRadius , cornerRadius);
 		
-		window.fillRect(getX(), getY(), width, height);
-		window.fillRect(getX()-cornerRadius, getY()+ cornerRadius, cornerRadius, height- (2*cornerRadius));
-		window.fillRect(getX()+width,getY()+cornerRadius, cornerRadius, height - (2*cornerRadius));
-		window.fillCircle(getX(),getY()+cornerRadius, cornerRadius);
-		window.fillCircle(getX()+width, getY()+cornerRadius, cornerRadius);
-		window.fillCircle(getX()+width, (getY()+height)-cornerRadius, cornerRadius);
-		window.fillCircle(getX(), (getY()+height)-cornerRadius, cornerRadius);
-
 	}
 
 }

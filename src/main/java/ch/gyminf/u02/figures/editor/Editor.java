@@ -17,8 +17,8 @@ public class Editor {
 
 		Graphics g = new Graphics();
 		
-		g.addFigure(new Circle(350, 150, 50));
-		//g.addFigure(new RoundedRectangle(100, 100, 100, 100, 20));
+		// g.addFigure(new Circle(350, 150, 50));
+		g.addFigure(new RoundedRectangle(200, 100, 200, 100, 20));
 		// g.addFigure(new Rectangle(200, 200, 200, 200));
 		//g.addFigure(new Triangle(new Point(300, 300), new Point(350, 200), new Point(400, 300)));
 		g.draw(window);
