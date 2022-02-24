@@ -32,8 +32,12 @@ public class Polygon {
 	}
 
 	public double getArea() {
-		// TODO Auto-generated method stub
-		return 0;
+		double doubleArea =0;
+		for (int i = 0; i < xCoords.length; i++){
+			doubleArea+= (yCoords[i]+ yCoords[(i+1)% yCoords.length])*(xCoords[i]- xCoords[(i+1)%xCoords.length]);
+			 
+		}
+		return doubleArea/2;
 	}
 	
 }
