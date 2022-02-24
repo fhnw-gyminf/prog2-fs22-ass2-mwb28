@@ -3,12 +3,12 @@ package ch.gyminf.u02.figures;
 import gui.Window;
 
 public class Line implements Figure, OpenPolygonalChain {
-	 private Point starPoint;
+	 private Point startPoint;
 	 private Point endPoint;
 	
 
 	public Line(int x0, int y0, int x1, int y1) {
-		starPoint = new Point(x0, y0);
+		startPoint = new Point(x0, y0);
 		endPoint = new Point (x1, y1);
 	
 
@@ -18,7 +18,7 @@ public class Line implements Figure, OpenPolygonalChain {
 
 	public Point getStart() {
 		
-		return starPoint;
+		return startPoint;
 	}
 
 	public Point getEnd() {
@@ -31,8 +31,8 @@ public class Line implements Figure, OpenPolygonalChain {
 	 */
 	@Override
 	public void move(int dx, int dy) {
-		starPoint.x += dx;
-		starPoint.y += dy;
+		startPoint.x += dx;
+		startPoint.y += dy;
 		endPoint.x +=dx;
 		endPoint.y += dy;
 
@@ -46,16 +46,16 @@ public class Line implements Figure, OpenPolygonalChain {
 	
 	@Override
 	public int getX() {	
-	return this.starPoint.x;	
+	return this.startPoint.x;	
 		
 	}
 	@Override
 	public int getY() {
-	return  this.starPoint.y;
+	return  this.startPoint.y;
 	}
 	@Override
 	public void draw(Window window) {
-		window.drawLine(starPoint.getX(),starPoint.getX(),endPoint.getX(),endPoint.getY());
+		window.drawLine(startPoint.getX(),startPoint.getX(),endPoint.getX(),endPoint.getY());
 	}
 
 	@Override
