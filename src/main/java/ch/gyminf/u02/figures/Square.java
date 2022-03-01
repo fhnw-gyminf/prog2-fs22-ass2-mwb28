@@ -67,13 +67,13 @@ public class Square extends AbstractFigure   implements ClosedFigure, ClosedPoly
 	@Override
 	public Line[] getEdges() {
 			
-		return null;
+		return square.getEdges();
 	}
 
 	@Override
 	public int getNumberOfEdges() {
 		
-		return 4;
+		return square.getNumberOfEdges();
 	}
 
 }
