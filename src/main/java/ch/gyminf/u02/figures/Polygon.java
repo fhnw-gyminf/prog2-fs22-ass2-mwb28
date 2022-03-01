@@ -36,7 +36,7 @@ public   class Polygon  implements Figure, ClosedFigure, ClosedPolygonalChain {
 					* (xCoords[i] - xCoords[(i + 1) % xCoords.length]);
 
 		}
-		return doubleArea / 2;
+		return Math.abs(doubleArea / 2);
 	}
 
 	@Override
@@ -72,8 +72,11 @@ public   class Polygon  implements Figure, ClosedFigure, ClosedPolygonalChain {
 
 	@Override
 	public Line[] getEdges() {
-		
-		return null ;
+		Line[] edges = new Line[xCoords.length];
+		for (int i = 0; i < xCoords.length; i++){
+			edges[i] = new Line(xCoords[i], yCoords[i], xCoords[(i+1)% xCoords.length], yCoords[(i+1)%xCoords.length]);
+		}
+		return edges;
 	}
 
 	@Override
@@ -84,7 +87,9 @@ public   class Polygon  implements Figure, ClosedFigure, ClosedPolygonalChain {
 
 	@Override
 	public void draw(Window window) {
-		// TODO Auto-generated method stub
+		for(int i = 0; i < xCoords.length; i++){
+			window.drawLine(xCoords[i], yCoords[i], xCoords[(i+1)% xCoords.length], yCoords[(i+1)%yCoords.length]);
+		}
 		
 	}
 	/**
@@ -115,7 +120,10 @@ public   class Polygon  implements Figure, ClosedFigure, ClosedPolygonalChain {
 
 	@Override
 	public void move(int dx, int dy) {
-		// TODO Auto-generated method stub
+		for(int i = 0; i< xCoords.length; i++){
+			xCoords[i]+= dx;
+			yCoords[i]+= dy;
+		}
 		
 	}
 }
