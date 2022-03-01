@@ -41,17 +41,17 @@ public class Line implements Figure, OpenPolygonalChain {
 		
 	}
 	/**
-	 * getX() and getY()  returns the startPoint of the Line 
+	 * getX() and getY()  returns the middle of the Line 
 	 */
 	
 	@Override
 	public int getX() {	
-	return this.startPoint.x;	
+	return this.startPoint.x + ((this.endPoint.x- this.startPoint.x)/2);	
 		
 	}
 	@Override
 	public int getY() {
-	return  this.startPoint.y;
+	return  this.startPoint.y + ((this.endPoint.y- this.startPoint.y)/2);
 	}
 	@Override
 	public void draw(Window window) {
@@ -60,14 +60,14 @@ public class Line implements Figure, OpenPolygonalChain {
 
 	@Override
 	public Line[] getEdges() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return new Line[] {this};
 	}
 
 	@Override
 	public int getNumberOfEdges() {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		return 1;
 	}
 
 }
