@@ -41,8 +41,24 @@ public class Polygon  implements Figure, ClosedFigure, ClosedPolygonalChain {
 
 	@Override
 	public boolean isConvex() {
-		// TODO Auto-generated method stub
-		return false;
+		
+		int zPrev = 0;
+		int zCurr = 0;
+
+		for (int i=0; i< xCoords.length; i++){
+
+			int dx1 = xCoords[(i+1)% xCoords.length] - xCoords[i];
+			int dy1 = yCoords[(i+1)% xCoords.length] - yCoords[i];
+			int dx2 = xCoords[(i+2)% xCoords.length] - xCoords[(i+1) % xCoords.length];
+			int dy2 = yCoords[(i+2)% xCoords.length] - yCoords[(i+1) % xCoords.length];
+			zCurr = dx1*dy2 - dy1*dx2;
+			if(zCurr !=0){
+				if(zCurr*zPrev < 0) return false;
+				else {zPrev = zCurr;}
+
+			}
+		}
+		return true;
 	}
 
 	@Override
@@ -53,8 +69,8 @@ public class Polygon  implements Figure, ClosedFigure, ClosedPolygonalChain {
 
 	@Override
 	public Line[] getEdges() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return null ;
 	}
 
 	@Override

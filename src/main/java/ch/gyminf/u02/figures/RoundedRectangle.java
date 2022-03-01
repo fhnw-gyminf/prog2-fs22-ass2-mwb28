@@ -34,12 +34,14 @@ public class RoundedRectangle extends AbstractFigure implements ClosedFigure {
 	@Override
 	public void draw(Window window) {
 		//window.setColor(0, 0, 0);
-		window.fillRect(getX()+cornerRadius, getY(), width-(2*cornerRadius), height);
+		//window.fillRect(getX()+cornerRadius, getY(), width-(2*cornerRadius), height);
 		//window.setColor(0, 255, 0);
-		window.fillRect(getX(), getY()+ cornerRadius, cornerRadius, height- (2*cornerRadius));
+		//window.fillRect(getX(), getY()+ cornerRadius, cornerRadius, height- (2*cornerRadius));
 		//window.setColor(255, 0, 0);
-		window.fillRect(getX()+width-cornerRadius,getY()+cornerRadius, cornerRadius, height - (2*cornerRadius));
+		//window.fillRect(getX()+width-cornerRadius,getY()+cornerRadius, cornerRadius, height - (2*cornerRadius));
 		//window.setColor(0, 0, 255);
+		window.fillRect(getX()+cornerRadius, getY(), width-(2*cornerRadius), height);
+		window.fillRect(getX(), getY()+ cornerRadius, width, height- (2*cornerRadius));
 		window.fillCircle(getX()+cornerRadius, getY()+cornerRadius, cornerRadius);
 		window.fillCircle(getX()+width-cornerRadius, getY()+cornerRadius, cornerRadius);
 		window.fillCircle(getX()+width-cornerRadius, getY()+height-cornerRadius, cornerRadius);
