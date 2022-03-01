@@ -47,6 +47,7 @@ public class RoundedRectangle extends AbstractFigure implements ClosedFigure {
 		window.fillCircle(getX()+width-cornerRadius, getY()+height-cornerRadius, cornerRadius);
 		window.fillCircle(getX()+cornerRadius,getY()+height-cornerRadius , cornerRadius);
 		
+		
 	}
 
 	@Override
@@ -57,20 +58,20 @@ public class RoundedRectangle extends AbstractFigure implements ClosedFigure {
 
 	@Override
 	public double getArea() {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		return width*height - (4*Math.pow(cornerRadius,2)- (Math.PI*Math.pow(cornerRadius,2)));
 	}
 
 	@Override
 	public double getCircumference() {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		return 2*(width + height - 4*cornerRadius + cornerRadius* Math.PI);
 	}
 
 	@Override
 	public boolean isConvex() {
-		// TODO Auto-generated method stub
-		return false;
+	
+		return true;
 	}
 
 }

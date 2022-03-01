@@ -29,7 +29,9 @@ public class Triangle implements Figure, ClosedFigure, ClosedPolygonalChain{
 
 	
 
-
+	/**
+	 * getX()/ getY() returns the 
+	 */
 	@Override
 	public int getX() {
 		

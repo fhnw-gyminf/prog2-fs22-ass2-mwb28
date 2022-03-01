@@ -2,7 +2,7 @@ package ch.gyminf.u02.figures;
 
 import gui.Window;
 
-public class Rectangle extends AbstractFigure implements ClosedFigure {
+public class Rectangle extends AbstractFigure implements ClosedFigure, ClosedPolygonalChain {
 	private int width;
 	private int height;
 
@@ -29,26 +29,46 @@ public class Rectangle extends AbstractFigure implements ClosedFigure {
 
 	@Override
 	public boolean contains(int x, int y) {
-		// TODO Auto-generated method stub
-		return false;
+		
+		return  x >= getX() && x  < getX()+width && y >= getY() && y < getY()+ height;
 	}
 
 	@Override
 	public double getArea() {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		return width*height;
 	}
 
 	@Override
 	public double getCircumference() {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		return 2 *(width +height);
 	}
 
 	@Override
 	public boolean isConvex() {
-		// TODO Auto-generated method stub
-		return false;
+		
+		return true;
+	}
+
+	@Override
+	public Line[] getEdges() {
+		Line[] rectEdges = new Line[4];
+		
+			rectEdges[0] = new Line(getX(),getY(), getX()+width, getY() );
+			rectEdges[1] = new Line(getX()+width, getY(), getX()+width, getY()+height);
+			rectEdges[2]= new Line(getX()+width, getY()+height, getX(), getY()+height );
+			rectEdges[3]= new Line(getX(), getY()+height,getX(),getY());
+
+		
+		
+		return rectEdges;
+	}
+
+	@Override
+	public int getNumberOfEdges() {
+		
+		return 4;
 	}
 
 }
