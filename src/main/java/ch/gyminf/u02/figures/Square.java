@@ -13,7 +13,7 @@ public class Square extends AbstractFigure   implements ClosedFigure, ClosedPoly
 		int[] xCoords = new int[4];
 		int[] yCoords = new int[4];
 		xCoords[0]=x; xCoords[1]=x + w; xCoords[2]= x +w;xCoords[3] =x;
-		yCoords[0]=y; yCoords[1]=y; xCoords[2]= y+w;xCoords[3] =y+w;
+		yCoords[0]=y; yCoords[1]=y; yCoords[2]= y+w;yCoords[3] =y+w;
 	
 		
 
