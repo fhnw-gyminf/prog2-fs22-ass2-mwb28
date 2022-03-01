@@ -2,7 +2,7 @@ package ch.gyminf.u02.figures;
 
 import gui.Window;
 
-public class Polygon  implements Figure, ClosedFigure, ClosedPolygonalChain {
+public   class Polygon  implements Figure, ClosedFigure, ClosedPolygonalChain {
 	private int[] xCoords;
 	private int[] yCoords;
 
@@ -60,10 +60,13 @@ public class Polygon  implements Figure, ClosedFigure, ClosedPolygonalChain {
 		}
 		return true;
 	}
-
+	/**
+	 * contains methode  is too complicated....
+	 */
 	@Override
 	public boolean contains(int x, int y) {
-		// TODO Auto-generated method stub
+		int INF = Integer.MAX_VALUE;
+
 		return false;
 	}
 

@@ -2,18 +2,30 @@ package ch.gyminf.u02.figures;
 
 import gui.Window;
 
-public class Square extends AbstractFigure implements ClosedFigure, ClosedPolygonalChain {
+public class Square extends AbstractFigure   implements ClosedFigure, ClosedPolygonalChain {
 	private int width;
-	private Line [] line;
+	
+	private Polygon square;
 
 	public Square(int x, int y, int w) {
 		super(x, y);
 		this.width = w;	
-		this.line = new Line[4];
-		line[0] = new Line(x, y, x+w, y);
-		line[1] = new Line(x+w, y, x+w, y+w);
-		line[2] = new Line(x+w, y+w, x, y+w);
-		line[3] = new Line( x, y+w, x, y);
+		int[] xCoords = new int[4];
+		int[] yCoords = new int[4];
+		xCoords[0]=x; xCoords[1]=x + w; xCoords[2]= x +w;xCoords[3] =x;
+		yCoords[0]=y; yCoords[1]=y; xCoords[2]= y+w;xCoords[3] =y+w;
+	
+		
+
+
+		this.square = new Polygon(xCoords, yCoords); 
+	
+		//({{1,2,3}, {2,4,5 }});//new Polygon({{x,x+w,x}, {y,y+h,y+h }});
+		//square[0][0]= 
+		// lines[0] = new Line(x, y, x+w, y);
+		// lines[1] = new Line(x+w, y, x+w, y+w);
+		// lines[2] = new Line(x+w, y+w, x, y+w);
+		// lines[3] = new Line( x, y+w, x, y);
 		
 		
 		
@@ -31,7 +43,7 @@ public class Square extends AbstractFigure implements ClosedFigure, ClosedPolygo
 	@Override
 	public boolean contains(int x, int y) {
 		
-		return x  < getX()+width && y < getY()+ width;
+		return x >= getX() && x  < getX()+width && y >= getY() && y < getY()+ width;
 	}
 
 	@Override

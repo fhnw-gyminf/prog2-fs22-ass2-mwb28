@@ -2,7 +2,7 @@ package ch.gyminf.u02.figures;
 
 import gui.Window;
 
-public class Triangle implements Figure, ClosedFigure{
+public class Triangle implements Figure, ClosedFigure, ClosedPolygonalChain{
  
 	private Point firstPoint;
 	private Point secondPoint;
@@ -76,6 +76,20 @@ public class Triangle implements Figure, ClosedFigure{
 	public boolean isConvex() {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+
+	@Override
+	public Line[] getEdges() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public int getNumberOfEdges() {
+		
+		return 3;
 	}
 
 
