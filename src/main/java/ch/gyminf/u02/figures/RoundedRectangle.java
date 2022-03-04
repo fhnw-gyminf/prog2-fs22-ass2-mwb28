@@ -52,8 +52,8 @@ public class RoundedRectangle extends AbstractFigure implements ClosedFigure {
 
 	@Override
 	public boolean contains(int x, int y) {
-		// TODO Auto-generated method stub
-		return false;
+		
+		 return x >= getX() && x  < getX()+width && y >= getY() && y < getY()+ height;
 	}
 
 	@Override
