@@ -5,6 +5,7 @@ import java.util.Random;
 import ch.gyminf.u02.figures.Circle;
 import ch.gyminf.u02.figures.Figure;
 import ch.gyminf.u02.figures.Point;
+import ch.gyminf.u02.figures.Polygon;
 import ch.gyminf.u02.figures.Rectangle;
 import ch.gyminf.u02.figures.RoundedRectangle;
 import ch.gyminf.u02.figures.Triangle;
@@ -16,10 +17,12 @@ public class Editor {
 		Window window = new Window("Figures", 800, 600);
 
 		Graphics g = new Graphics();
+		
 		g.addFigure(new Circle(350, 150, 50));
-		g.addFigure(new RoundedRectangle(100, 100, 100, 100, 20));
+		g.addFigure(new RoundedRectangle(200, 100, 200, 100, 20));
 		g.addFigure(new Rectangle(200, 200, 200, 200));
 		g.addFigure(new Triangle(new Point(300, 300), new Point(350, 200), new Point(400, 300)));
+		g.addFigure(new Polygon(new int []{200,300,400},new int[] {20,500,700}));
 		g.draw(window);
 
 		window.open();
